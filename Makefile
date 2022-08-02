@@ -11,8 +11,6 @@ test:
 	./test
 
 check: 
-	cp -f ./materials/CPPLINT.cfg CPPLINT.cfg
-	python3 ./materials/cpplint.py --extensions=cpp *.cpp
 	CK_FORK=no leaks --atExit -- ./test
 
 gcov_report:
